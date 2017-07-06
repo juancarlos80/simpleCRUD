@@ -45,6 +45,10 @@ public class StudentActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Insert or update a student
+     * @param btn, the trigger view
+     */
     public void save(View btn){
         if( student == null ){
             student = new Student();
@@ -64,6 +68,10 @@ public class StudentActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Return to the main activity
+     * @param btn, the trigger view
+     */
     public void ir_main(View btn){
         Intent intent = new Intent( this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);

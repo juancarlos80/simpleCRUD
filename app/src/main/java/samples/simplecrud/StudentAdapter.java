@@ -64,12 +64,21 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentViewHolder> {
         });
     }
 
+    /**
+     * Open the activity sending the student for edit
+     * @param student
+     */
     public void edit(Student student){
         Intent intento = new Intent( context, StudentActivity.class);
         intento.putExtra("student", student);
         context.startActivity(intento);
     }
 
+    /**
+     * Delete the student from the data base and notify the the event if was correct in the
+     * otherwise show a message
+     * @param student
+     */
     public void delete(Student student){
         PresenterStudent presenterStudent = new PresenterStudent(context);
         if( presenterStudent.deleteStudent( student) <= 0 ){

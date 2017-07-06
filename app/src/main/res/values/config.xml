@@ -2,10 +2,4 @@
 <resources>
     <string name="db_file">student_db</string>
     <string name="db_version">2</string>
-<<<<<<< HEAD
-=======
-    <string name="pref_name">Simple CRUD</string>
-    <string name="dir_data">simple_crud_data</string>
-
->>>>>>> 07c4580499586751e216817abc9acbb46a1a74e5
 </resources>

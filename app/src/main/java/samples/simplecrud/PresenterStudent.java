@@ -35,6 +35,10 @@ public class PresenterStudent {
         DBHelper = DatabaseHelper.getInstance(context);
     }
 
+    /**
+     * Init the database from a file if the database is not created yet
+     * @param ctx the context application
+     * */
     public static void init_db(Context ctx){
 
         String rutaDestino = "/data/data/"+ ctx.getPackageName()+"/databases/"+ctx.getString(R.string.db_file)+"_"+ctx.getString(R.string.db_version);
@@ -61,7 +65,9 @@ public class PresenterStudent {
         }
     }
 
-
+    /**
+     *  Copy the scheme database from a file
+     *  */
     public static void CopyDB(InputStream ip, OutputStream op) throws IOException {
         byte[] buffer = new byte[1024];
         int largo;
@@ -80,6 +86,10 @@ public class PresenterStudent {
         DBHelper.close();
     }
 
+    /**
+     *  Retrives all the students from the data base
+     *  @retun Array with all students in to the data base
+     */
     public ArrayList<Student> getAll(){
         ArrayList<Student> students = new ArrayList<>();
 
@@ -105,6 +115,13 @@ public class PresenterStudent {
         return students;
     }
 
+    /**
+     *  Insert or update the student in the data base, if the student instance have an id, then
+     *  update operation
+     *  @param student, the student for the operation
+     *  @return integer with the id in the case of insert or the number of rows afected in update
+     *  case, if some error ocurred return 0
+     */
     public int setStudent(Student student){
         int res = 0;
         String action;
@@ -130,6 +147,11 @@ public class PresenterStudent {
         return res;
     }
 
+    /**
+     * Delete a student from the data base
+     * @param student, the student to be deleted
+     * @return 1 if the delete was successful or 0 if was a problem
+     */
     public int deleteStudent(Student student){
         int res = 0;
         open();

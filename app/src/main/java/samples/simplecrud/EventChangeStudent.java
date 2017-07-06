@@ -2,6 +2,7 @@ package samples.simplecrud;
 
 /**
  * Created by Juan Carlos on 05/07/2017.
+ * Event to send through the bus
  */
 
 public class EventChangeStudent {

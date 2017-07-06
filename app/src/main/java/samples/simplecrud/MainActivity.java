@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);
     }
 
+
     public void fill_students(){
         PresenterStudent presenterStudent = new PresenterStudent(this);
         ArrayList<Student> estudiantes = presenterStudent.getAll();
