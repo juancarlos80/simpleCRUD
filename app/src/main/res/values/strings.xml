@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SimpleCRUD</string>
+
+    <string name="title_main">Students List</string>
+    <string name="title_new">New Student</string>
+    <string name="title_edit">Edit Student</string>
+    <string name="title_delete">Delete Student</string>
+
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_new">New</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <string name="lab_name">Name</string>
+    <string name="lab_address">Address</string>
+    <string name="lab_birth">Birth Date</string>
+    <string name="lab_phone">Phone Number</string>
+    <string name="lab_email">Email</string>
+
+    <string name="tex_confirm">Are you sure to delete %1$s?</string>
+    <string name="tex_invalid_email">The email %1$s is not valid</string>
+    <string name="tex_error_operation">Error, if the problem persist consult with your system administrator</string>
+
+
+</resources>
